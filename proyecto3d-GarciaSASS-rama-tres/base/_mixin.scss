@@ -1,0 +1,39 @@
+
+//mixin con parametros
+
+@mixin medidas ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+//mixin sin parametros
+
+@mixin box-model {
+    background-color: #FCF7BB;
+    box-shadow: 2px 2px 5px ;
+    margin: 2rem;
+    padding: 2rem;
+    border: 2px solid black;
+    
+    
+}
+
+@mixin primera-letra {
+    color: #768fb5;
+    font-size: 2rem;
+    font-family: 'satisfy', cursive;
+    
+}
+@mixin card {
+    
+    margin: 20px;
+    padding: 20px;
+    width: 416px;
+    height: 299px;
+    position: relative;
+    color: #4a293b;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}

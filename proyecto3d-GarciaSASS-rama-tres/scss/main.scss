@@ -1,0 +1,1006 @@
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth
+}
+
+//header
+
+
+@import "base/variables";
+@import "base/extend";
+@import "base/mapas";
+@import "base/mixin";
+
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+   
+    font-weight: bold;
+    font-size: 19px;
+    top: -100vh;
+    background-image: $color-gradiente;
+    z-index: 1;
+
+    .imagenUno{  
+        width: 80px;
+        height: 80px;
+        animation-name: girar;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+            }
+
+    h1{
+        font-size: 50px;   
+    }
+
+}
+//scss del index
+#menuUno {
+    ul{
+        li{
+            color: #000;
+            position: relative;
+            text-decoration: none;
+            transition: all 1ms ease-in-out;
+            cursor: pointer;
+            padding: 10px;
+        }
+        li:hover{
+            color: rgba(231, 210, 15, 0.979);
+        }
+
+        li::before{
+            content: "";
+            position: absolute;
+            background: #CBE2B0;
+            inset: 0;
+            position: absolute;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease-in-out;
+            z-index: -1;
+        }
+
+        li:hover::before{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+nav{
+    ul{
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+    }
+}
+
+//estilos Main del index
+
+.descripcion::first-letter{
+    @include primera-letra;
+}
+
+.primeraSeccion{
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+} 
+
+.prod{
+    margin: 0px 20px 20px 20px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px
+    
+    
+}
+
+//estilos cards
+
+
+
+.cardUno{
+    @include card;
+
+    background: url('../img/img2.png') center no-repeat;
+  
+}
+.cardDos{
+    @include card;
+
+    background: url('../img/img3.png') center no-repeat;
+  
+}
+
+.cardTres{
+    @include card;
+
+    background: url('../img/img4.png') center no-repeat;
+  
+}
+
+.cardCuatro{
+    @include card;
+
+    background: url('../img/img5.png') center no-repeat;
+  
+}
+
+.cardCinco{
+    @include card;
+
+    background: url('../img/img6.png') center no-repeat;
+  
+}
+
+.cardSeis{
+    @include card;
+
+    background: url('../img/img7.png') center no-repeat;
+  
+}
+
+
+
+
+.cardContent{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background-color:  #FFE9AE;
+    border-top-left-radius: 20px;
+    transform: translateY(70px);
+    transition: transform .25s;
+
+}
+
+.cardContent::before{
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px  #FFE9AE;
+}
+
+.cardTitle{
+    color: #6A515E;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.cardSub{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.cardDesc{
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.cardUno:hover  {
+    .cardContent{
+    transform: translateY(0);
+    }
+
+    .cardDesc{
+        opacity: 1;
+        transition-delay: .25s;
+    }
+}
+
+.cardDos:hover {
+    .cardContent{
+    transform: translateY(0);
+    }
+
+    .cardDesc{
+        opacity: 1;
+        transition-delay: .25s;
+    }
+}
+
+.cardTres:hover {
+    .cardContent{
+    transform: translateY(0);
+    }
+
+    .cardDesc{
+        opacity: 1;
+        transition-delay: .25s;
+    }
+}
+.cardCuatro:hover {
+    .cardContent{
+    transform: translateY(0);
+    }
+
+    .cardDesc{
+        opacity: 1;
+        transition-delay: .25s;
+    }
+}
+
+.cardCinco:hover {
+    .cardContent{
+    transform: translateY(0);
+    }
+
+    .cardDesc{
+        opacity: 1;
+        transition-delay: .25s;
+    }
+}
+
+.cardSeis:hover {
+    .cardContent{
+    transform: translateY(0);
+    }
+
+    .cardDesc{
+        opacity: 1;
+        transition-delay: .25s;
+    }
+}
+
+
+//scss del footer
+footer{
+    
+    margin: 0;
+    padding: 0;
+    font-size: map-get($map: $footer , $key:font-size );
+    height: map-get($map: $footer, $key:heigth );
+    font-weight: map-get($map: $footer, $key: font-weight );
+    
+
+    a{
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+// iconos de redes 
+.icons {
+    display: flex;
+    column-gap: 25px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: black;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.iconInstagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.iconFab:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+}
+
+.iconMail:hover {
+    background-color: #DB4437;
+    outline-color: #DB4437;
+}
+
+.iconGithub:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+}
+
+//scss de whatsapp
+
+.whatsapp{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+//scss de contacto
+
+.introCon{
+    margin: 40px;
+}
+
+.forCont{
+    
+    padding: 0px 40px 50px 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    form{
+        width: 50%;
+    }    
+    iframe{
+        width: 50%;
+    }
+    button{
+        font-weight: bold;
+        color: black;
+        background-color: #FFC4C4;
+    }
+
+    button:hover{
+        background-color: #EE6983;
+        font-weight: bold;
+    }
+}
+
+//scss de opiniones
+
+
+#fondoDo{
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(238.72deg, #FFDDDD 0%, #720066 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
+}
+
+#butonDos{
+    font-weight: bold;
+    color: black;
+    background-color: #FFC4C4;
+    
+}
+
+#butonDos:hover{
+    background-color: #EE6983;
+    font-weight: bold;
+}
+
+
+//scss de cotizaciones
+
+.cotUno{
+    margin: $margin;
+    padding: $pagging;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.formCot{
+    margin: $margin;
+    padding: $pagging;
+    font-size: 25px;
+    background-color: linear-gradient(125.95deg, #C700BF 10.95%, #7DA900 100%), linear-gradient(341.1deg, #00C2FF 7.52%, #4E00B1 77.98%), linear-gradient(222.34deg, #A90000 12.99%, #00FFE0 87.21%), linear-gradient(130.22deg, #8FA600 18.02%, #5A31FF 100%);
+}
+
+.legUno{
+    font-weight: bold;
+}
+
+.tablaTres{
+    font-weight: bold;
+    text-align: center;
+}
+
+//pagina de formas de pago
+
+.fotos{
+    display: grid;
+    margin: 0px 0px 40px 0px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    background: linear-gradient(45deg, #C7F5FE 10%, #C7F5FE 40%, #FCC8F8 40%, #FCC8F8 60%, #EAB4F8 60%, #EAB4F8 65%, #F3F798 65%, #F3F798 90%);
+    padding: 40px 60px;
+    gap: 2rem;
+   
+    align-content: center;
+
+    img{
+        display: block;
+        width: 50%;
+    }
+
+    p{
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+    }
+}
+
+
+
+.itemFotos{
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:#437dbfb2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.itemFotos:hover .overlay{
+    opacity: 1;
+}
+
+.itemFotos:hover img{
+    filter: blur(3px);
+}
+
+
+
+.carritoDiv{
+    display: flex;
+    flex-direction: row-reverse;
+    @extend %Pos
+    
+}
+
+.carritoH2{
+    margin: $margin;
+    padding: $pagging;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.carritoImg{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    
+}
+
+.imagenArt{
+    
+    text-align: center;
+    margin: 5px;
+    padding: 0px;
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(127.43deg, #00FFFF 0%, #FFFFFF 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(64.82deg, #DBFF00 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
+
+    h3{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px;
+    }
+}
+
+.envioUno{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+//estilos de pagina de contacto
+
+
+
+
+.imgCon{
+    width: 300px;
+    height: 300px;
+}
+
+.tipoProducto{
+    margin: $margin/4;
+    padding: $pagging/4;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.sectionOpi {
+    ul{
+        li::first-letter{
+            @include primera-letra;
+        }
+    }       
+}
+
+
+
+
+//estilos grid de index
+
+.puntoUno{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.primeraSeccion{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:  "quienes imagen"
+                          "planet  imagen" 
+                          "tenemos imagen" ;
+justify-content: center;
+align-items: center;
+justify-items: center;
+}
+
+.puntoUno{
+    grid-area: quienes;
+}
+
+.descripcion{
+    grid-area: planet;
+}
+
+.descripcionDos{
+    grid-area: tenemos ;
+}
+.imagenTiendas{
+    grid-area: imagen;
+}
+
+.videos{
+    padding: 40px 70px;
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-areas: "video3D textoDere";
+    gap: 2rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.desDer{
+    text-align: left;
+    grid-area: textoDere;
+}
+
+.contenido iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.video3D{
+    grid-area: video3D;
+}
+
+
+//grid de productos
+
+.productos{
+    margin: 0px 0px 40px 0px;
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(127.43deg, #00FFFF 0%, #FFFFFF 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(64.82deg, #DBFF00 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+
+
+.footerUno{
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(238.72deg, #FFDDDD 0%, #720066 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+                        "redes"                    
+                         "todos"
+                         "arriba";
+                         
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+   
+}
+
+.icons{
+    grid-area: redes;
+    margin: 10px;
+}
+
+
+.todos{
+    grid-area: todos;
+    margin: 10px;
+}
+
+.irArriba{
+    grid-area: arriba;
+    margin: 10px;
+    font-weight: bold;
+}
+
+
+.mainOpi{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "uno uno dos "
+                          "uno uno dos";
+
+   justify-content: space-evenly;
+   justify-items: center;
+   align-items: center;
+}
+
+.sectionOpi{
+    grid-area: uno;
+}
+
+.sectionOpid{
+    grid-area: dos;
+}
+
+//media queries para tablet
+//media queries de header
+
+
+@media screen and (max-width: 1028px) and (min-width: 769px) {
+
+    .videos{
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        margin: 50px;
+        line-height: 1.5rem;
+        display: grid;
+        grid-template-areas: "video3D"
+                             "textoDere";
+        gap: 2rem;
+        
+        overflow: hidden;
+    }
+
+    .video3D{
+        grid-area: video3D;
+    }
+    
+    .desDer{
+        text-align: left;
+    }
+
+    //resoponsive productos
+
+    .productos{
+       
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto auto auto auto;
+        
+
+
+        gap: 2rem;
+    }
+
+    //responsive carruito
+
+
+    .imagenArt{
+        img{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 576px) 
+{
+    header {
+        
+        top: 0;
+        height: 250px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+
+        h1{
+            font-size: 3rem;
+        }
+    }
+
+
+    .primeraSeccion{
+    display: flex;
+    flex-direction: column;
+    }
+
+
+    .footerUno{
+        height: 35vh;
+    }
+
+    .videos{
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 20px;
+        line-height: 1.5rem;
+        display: grid;
+        grid-template-areas: "video3D"
+                             "textoDere";
+        gap: 2rem;
+        
+        overflow: hidden;
+    }
+
+    .video3D{
+        grid-area: video3D;
+    }
+    
+    .desDer{
+        text-align: left;
+    }
+
+    .whatsapp{
+        transform: scale(0.8);
+        
+    }
+    
+    .carritoImg{
+        margin: 0;
+        padding: 0;    
+        transform: scale(0.8);
+        bottom: 10px;
+        right: 10px;
+    }
+
+//resoponsive productos
+
+.productos{
+       
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto auto auto auto;
+    
+
+
+    gap: 2rem;
+}
+    
+//responsive carruito
+
+.imagenArt{
+    img{
+        display: none;
+    }
+}
+
+}
+//media queries
+
+ 
+
+//media querie para telefonos
+
+@media screen and (max-width: 640px) and (min-width: 350px) {
+    
+    header {
+        padding: 0;
+        margin: 0%;
+        top: 0;
+        height: 250px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        
+    }
+
+        #titulo{
+            font-size: 4vh;
+        }
+    
+
+    
+    #menuUno{
+        padding: 10px 60px;
+    }
+
+    .videos{
+        display: none;
+    
+    }
+    .desDer{
+        display: none;
+    }
+    
+    
+
+    .primeraSeccion{
+        height: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: "imagen"
+                                "quienes"
+                                "descripcion"
+                                "descripcionDos";
+    }
+
+    .puntoUno{
+        grid-area: quienes;
+    }
+    .descripcion{
+        grid-area: descripcion;
+    }
+
+    .descripcionDos{
+        grid-area: descripcionDos;
+
+    }
+
+    .imagenTiendas{
+        grid-area: imagen;
+    }
+
+    .footerUno{
+        height: 35vh;
+    }
+
+    .whatsapp{
+        transform: scale(0.5);
+        
+    }
+
+    .carritoImg{
+        margin: 0;
+        padding: 0;    
+        transform: scale(0.5);
+        bottom: 10px;
+        right: 10px;
+    }
+    //resoponsive productos
+
+    .productos{
+        
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto auto auto auto;
+        
+
+
+        gap: 2rem;
+    }
+
+    //responsive carruito
+
+    .imagenArt{
+        img{
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+//media queri main de opiniones
+@media screen and (max-width: 768px) and (min-width: 573px) {
+    .mainOpi{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas: "uno "
+                              "dos";
+    
+       
+    }
+
+    .sectionOpid{
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+
