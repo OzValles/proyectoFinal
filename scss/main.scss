@@ -133,156 +133,16 @@ nav{
 //estilos cards
 
 
-
-.cardUno{
-    @include card;
-
-    background: url('../img/img2.png') center no-repeat;
-  
-}
-.cardDos{
-    @include card;
-
-    background: url('../img/img3.png') center no-repeat;
-  
+.imgProductos{
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 1rem ;
 }
 
-.cardTres{
-    @include card;
-
-    background: url('../img/img4.png') center no-repeat;
-  
-}
-
-.cardCuatro{
-    @include card;
-
-    background: url('../img/img5.png') center no-repeat;
-  
-}
-
-.cardCinco{
-    @include card;
-
-    background: url('../img/img6.png') center no-repeat;
-  
-}
-
-.cardSeis{
-    @include card;
-
-    background: url('../img/img7.png') center no-repeat;
-  
-}
-
-
-
-
-.cardContent{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 15px;
-    background-color:  #FFE9AE;
-    border-top-left-radius: 20px;
-    transform: translateY(70px);
-    transition: transform .25s;
-
-}
-
-.cardContent::before{
-    content: '';
-    position: absolute;
-    top: -47px;
-    right: -45px;
-    width: 100px;
-    height: 100px;
-    transform: rotate(-175deg);
-    border-radius: 50%;
-    box-shadow: inset 48px 48px  #FFE9AE;
-}
-
-.cardTitle{
-    color: #6A515E;
-    line-height: 20px;
-    font-weight: bold;
-}
-
-.cardSub{
-    display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.cardDesc{
-    font-size: 15px;
-    opacity: 0;
-    transition: opacity .5s;
-}
-
-.cardUno:hover  {
-    .cardContent{
-    transform: translateY(0);
-    }
-
-    .cardDesc{
-        opacity: 1;
-        transition-delay: .25s;
-    }
-}
-
-.cardDos:hover {
-    .cardContent{
-    transform: translateY(0);
-    }
-
-    .cardDesc{
-        opacity: 1;
-        transition-delay: .25s;
-    }
-}
-
-.cardTres:hover {
-    .cardContent{
-    transform: translateY(0);
-    }
-
-    .cardDesc{
-        opacity: 1;
-        transition-delay: .25s;
-    }
-}
-.cardCuatro:hover {
-    .cardContent{
-    transform: translateY(0);
-    }
-
-    .cardDesc{
-        opacity: 1;
-        transition-delay: .25s;
-    }
-}
-
-.cardCinco:hover {
-    .cardContent{
-    transform: translateY(0);
-    }
-
-    .cardDesc{
-        opacity: 1;
-        transition-delay: .25s;
-    }
-}
-
-.cardSeis:hover {
-    .cardContent{
-    transform: translateY(0);
-    }
-
-    .cardDesc{
-        opacity: 1;
-        transition-delay: .25s;
-    }
+.bgJs {
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(127.43deg, #00FFFF 0%, #FFFFFF 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(64.82deg, #DBFF00 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
 }
 
 

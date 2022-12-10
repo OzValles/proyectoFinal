@@ -57,19 +57,28 @@
     </div>
 </header>
     <main>
-      <div class="carritoDiv">
-          <h2 class="carritoH2">Carrito</h2>
-          <img src="../img/carrito.png" alt="Imagen del carrito">
-          <!--Aqui irian los articulos que el cliente escogio-->
-      </div> 
-
-      <section class="articulosAgr">
-      <h2 class="envioUno">Articulos Agregados</h2>
-      <div class="imagenArt">   
-        <img  src="../img/img13.png" alt="Articulos agregados">
-        <h3>Total a Pagar = </h3>
-      </div>
+      
+  <div id="cotizacionesPr">
+      <section >
+        <h3 class="envioUno">Cotizacion </h3>
+        <h4 class="text-center fs-4"> Solo Productos Rick y Morty</h4>
       </section>
+
+      <section id="cotizacionesP">
+        <div class="text-center">
+          <h4>Coloque el nombre del personaje que quieras cotizar </h4>
+          <input type="text" name="name" id="name" placeholder="Coloque el personaje">
+          <button id="todos" class="btn colorBoton"> Wubba Lubba Dub Dub</button>
+          <button id="vaciarApi" class="btn colorBoton"> Borrar Busqueda</button>
+        </div>
+
+        <ul id="lista" ></ul>
+        <div class="row row-cols-1 cards">
+          
+
+        </div>
+      </section>
+    </div>
 
       <section>
         <h3 class="envioUno">Formas de Pago</h3>
@@ -133,7 +142,7 @@
 
      <!--Whatsapp -->
      <div class="whatsapp">
-      <a href="https://api.whatsapp.com/send?phone=55544555394" target="_blank" class="icon iconWhats"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=5544555394" target="_blank" class="icon iconWhats"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
     </div>
     
     <footer class="footerUno">
@@ -154,12 +163,16 @@
       <a href="https://github.com/OzValles/proyecto3d-GarciaSASS" target="_blank" class="icon iconGithub">
         <i class="fa-brands fa-github fa-1x"></i>
       </a>
+
     </div>
-      <a class="carritoImg" href="../pages/formasdepago.html"> <img src="../img/carrito.png" alt="Carrito de compras"></a>
+      <a class="carritoImg" href="../pages/productos.html"> <img src="../img/carrito.png" alt="Carrito de compras"></a>
       <a class="irArriba" href="#Ir-arriba" > <i class="fa-regular fa-circle-up  fa-1.5x"></i> </a>
       <h4 class="todos">TODOS LOS DERECHOS RESERVADOS</h4>
   </footer>
+
   <!--javascript-->
+  <script src="../cotizacion.js"></script>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 

@@ -83,163 +83,56 @@ nav ul li {
   padding: 20px;
   text-align: left; }
 
-.prod {
-  margin: 0px 20px 20px 20px;
+  .imgProductosJs{
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 1rem ;
+}
+
+.prod{
+  margin: 0px 10px 10px 10px;
   padding: 20px;
   font-weight: bold;
   text-align: center;
-  font-size: 45px; }
+  font-size: 45px
+  
+}
 
-.cardUno {
-  margin: 20px;
+.carritoCom{
+  background: white;
+  margin: 0px 0px 0px 0px;
   padding: 20px;
-  width: 416px;
-  height: 299px;
-  position: relative;
-  color: #4a293b;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background: url("../img/img2.png") center no-repeat; }
+  font-weight: bold;
+  text-align: center;
+  font-size: 45px
+}
 
-.cardDos {
-  margin: 20px;
-  padding: 20px;
-  width: 416px;
-  height: 299px;
-  position: relative;
-  color: #4a293b;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background: url("../img/img3.png") center no-repeat; }
+.bgJs {
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(127.43deg, #00FFFF 0%, #FFFFFF 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(64.82deg, #DBFF00 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
+}
 
-.cardTres {
-  margin: 20px;
-  padding: 20px;
-  width: 416px;
-  height: 299px;
-  position: relative;
-  color: #4a293b;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background: url("../img/img4.png") center no-repeat; }
+#cotizacionesPr{ 
+  background:  linear-gradient(45deg, #C7F5FE 10%, #C7F5FE 40%, #FCC8F8 40%, #FCC8F8 60%, #EAB4F8 60%, #EAB4F8 65%, #F3F798 65%, #F3F798 90%);
+}
 
-.cardCuatro {
-  margin: 20px;
-  padding: 20px;
-  width: 416px;
-  height: 299px;
-  position: relative;
-  color: #4a293b;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background: url("../img/img5.png") center no-repeat; }
 
-.cardCinco {
-  margin: 20px;
-  padding: 20px;
-  width: 416px;
-  height: 299px;
-  position: relative;
-  color: #4a293b;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background: url("../img/img6.png") center no-repeat; }
+.card {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
 
-.cardSeis {
-  margin: 20px;
-  padding: 20px;
-  width: 416px;
-  height: 299px;
-  position: relative;
-  color: #4a293b;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden;
-  background: url("../img/img7.png") center no-repeat; }
+.colorBoton{
+  color:white;
+  background-color: salmon;
+}
 
-.cardContent {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 15px;
-  background-color: #FFE9AE;
-  border-top-left-radius: 20px;
-  transform: translateY(70px);
-  transition: transform .25s; }
-
-.cardContent::before {
-  content: '';
-  position: absolute;
-  top: -47px;
-  right: -45px;
-  width: 100px;
-  height: 100px;
-  transform: rotate(-175deg);
-  border-radius: 50%;
-  box-shadow: inset 48px 48px  #FFE9AE; }
-
-.cardTitle {
-  color: #6A515E;
-  line-height: 20px;
-  font-weight: bold; }
-
-.cardSub {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 10px; }
-
-.cardDesc {
-  font-size: 15px;
-  opacity: 0;
-  transition: opacity .5s; }
-
-.cardUno:hover .cardContent {
-  transform: translateY(0); }
-
-.cardUno:hover .cardDesc {
-  opacity: 1;
-  transition-delay: .25s; }
-
-.cardDos:hover .cardContent {
-  transform: translateY(0); }
-
-.cardDos:hover .cardDesc {
-  opacity: 1;
-  transition-delay: .25s; }
-
-.cardTres:hover .cardContent {
-  transform: translateY(0); }
-
-.cardTres:hover .cardDesc {
-  opacity: 1;
-  transition-delay: .25s; }
-
-.cardCuatro:hover .cardContent {
-  transform: translateY(0); }
-
-.cardCuatro:hover .cardDesc {
-  opacity: 1;
-  transition-delay: .25s; }
-
-.cardCinco:hover .cardContent {
-  transform: translateY(0); }
-
-.cardCinco:hover .cardDesc {
-  opacity: 1;
-  transition-delay: .25s; }
-
-.cardSeis:hover .cardContent {
-  transform: translateY(0); }
-
-.cardSeis:hover .cardDesc {
-  opacity: 1;
-  transition-delay: .25s; }
+.colorBoton:hover {
+  background-color:blue ;
+  color: white;
+}
 
 footer {
   margin: 0;
@@ -266,7 +159,8 @@ footer {
   color: black;
   border-radius: 50%;
   outline: 2px solid #fff;
-  transition-property: outline-offset, outline-color, background-color;
+  transition-property: outline-offset, outline-color,
+ background-color;
   transition-duration: .25s; }
 
 .icon:hover {
@@ -463,7 +357,9 @@ footer {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 0.5fr 0.5fr 0.5fr;
-  grid-template-areas: "quienes imagen" "planet  imagen"  "tenemos imagen";
+  grid-template-areas: "quienes imagen"
+ "planet  imagen" 
+ "tenemos imagen";
   justify-content: center;
   align-items: center;
   justify-items: center; }
@@ -518,7 +414,9 @@ footer {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "redes"                     "todos" "arriba";
+  grid-template-areas: "redes"                    
+ "todos"
+ "arriba";
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -542,7 +440,8 @@ footer {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "uno uno dos " "uno uno dos";
+  grid-template-areas: "uno uno dos "
+ "uno uno dos";
   justify-content: space-evenly;
   justify-items: center;
   align-items: center; }
@@ -562,7 +461,8 @@ footer {
     margin: 50px;
     line-height: 1.5rem;
     display: grid;
-    grid-template-areas: "video3D" "textoDere";
+    grid-template-areas: "video3D"
+ "textoDere";
     gap: 2rem;
     overflow: hidden; }
   .video3D {
@@ -603,7 +503,8 @@ footer {
     margin: 20px;
     line-height: 1.5rem;
     display: grid;
-    grid-template-areas: "video3D" "textoDere";
+    grid-template-areas: "video3D"
+ "textoDere";
     gap: 2rem;
     overflow: hidden; }
   .video3D {
@@ -651,7 +552,10 @@ footer {
     height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "imagen" "quienes" "descripcion" "descripcionDos"; }
+    grid-template-areas: "imagen"
+ "quienes"
+ "descripcion"
+ "descripcionDos"; }
   .puntoUno {
     grid-area: quienes; }
   .descripcion {
@@ -687,7 +591,8 @@ footer {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "uno " "dos"; }
+    grid-template-areas: "uno "
+ "dos"; }
   .sectionOpid {
     padding: 10px;
     margin: 10px; } }
